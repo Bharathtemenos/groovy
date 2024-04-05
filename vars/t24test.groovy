@@ -1,9 +1,10 @@
-def call(body) {
-    // Delegate processing of the DSL block to another method
-    pipeline {
-        agent any
-        stages {
-            body()
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
         }
     }
 }
