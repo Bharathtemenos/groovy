@@ -3,8 +3,12 @@ def call(body) {
     pipeline {
         agent any
         stages {
-            // Execute the provided closure (body) within the pipeline block
-            echo 'Hello how are you'
-        }
-    }
+            stage('Build') {
+                 steps {
+                    // Example Maven build step
+                      echo "Hello how are you"
+                       }
+                 }
+              }
+            }  
 }
