@@ -4,7 +4,7 @@ def call(body) {
         agent any
         stages {
             // Execute the provided closure (body) within the pipeline block
-            body()
+            echo 'Hello how are you'
         }
     }
 }
