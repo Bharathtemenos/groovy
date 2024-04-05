@@ -1,7 +1,9 @@
-// Define a function to greet a user
-def greetUser(String username) {
-    println "Hello, $username! Welcome to Jenkins Groovy scripting."
+def call(body) {
+    // Delegate processing of the DSL block to another method
+    pipeline {
+        agent any
+        stages {
+            body()
+        }
+    }
 }
-
-// Call the function to greet a user
-greetUser("John")
